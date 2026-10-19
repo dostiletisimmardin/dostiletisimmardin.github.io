@@ -1,0 +1,1886 @@
+
+<head>
+	 <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DLZ68Q2LQM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DLZ68Q2LQM');
+</script>
+  <meta charset="utf-8" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOST İLETİŞİM FİYAT LİSTESİ</title>
+  <!-- SOSYAL MEDYA ÖNİZLEME ETİKETLERİ -->
+  <meta property="og:title" content="DOST İLETİŞİM - Güncel Telefon ve Ürün Fiyat Listesi" />
+  <meta property="og:description" content="RAM’a göre filtreleme, WhatsApp sipariş kolaylığı, anlık dolar kuru ile güncel liste!" />
+  <meta property="og:image" content="https://i.hizliresim.com/56pyamb.png" />
+  <meta property="og:url" content="https://dostiletisimmardin.github.io/fiyatlistesi/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="WhatsApp sipariş, RAM filtreleme, güncel dolar kuru ve hızlı erişim!" />
+
+<style>
+.status-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;       /* ortala */
+  margin-top: 6px;
+}
+
+.status-buttons button {
+  padding: 8px 14px;             /* biraz daha dolgun */
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);      /* hafif gölge */
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.status-buttons button:hover {
+  background: #e9ecef;           /* hover rengi */
+}
+
+.status-buttons button:active {
+  transform: scale(0.96);        /* tıklama hissi */
+}
+
+.status-buttons button.active {
+  background: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+  box-shadow: 0 2px 6px rgba(0,123,255,0.35);  /* aktifken mavi gölge */
+}
+
+
+
+.product {
+  position: relative;
+}
+
+.better {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+
+</style>
+
+<div id="comparePopup">
+  <div>
+    <h3>Karşılaştırma</h3>
+    <div id="compareTableContainer"></div>
+    <button onclick="document.getElementById('comparePopup').style.display='none'" style="margin-top:10px;padding:8px 16px;border:none;background-color:#dc3545;color:white;border-radius:5px;">Kapat</button>
+  </div>
+</div>
+
+
+
+<style>
+.compare-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.compare-checkbox {
+  display: none;
+}
+
+.compare-label {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.compare-label:hover {
+  background-color: #e0e0e0;
+}
+
+.compare-icon {
+  width: 18px;
+  height: 18px;
+}
+
+
+.compare-checkbox:checked + .compare-label {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #0056b3;
+}
+
+.compare-checkbox:checked + .compare-label .compare-icon {
+  filter: brightness(0) invert(1);
+}
+
+
+
+
+
+
+#comparePopup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+}
+
+#comparePopup > div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 100%;
+  max-height: 90%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#comparePopup table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#comparePopup th,
+#comparePopup td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+#comparePopup th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+#comparePopup td:first-child {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.better {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+  <style>
+
+	
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .top-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .top-container img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    .group-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+      justify-content: center;
+    }
+    .group-buttons a {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: center;
+      min-width: 150px;
+    }
+    .group-buttons a img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .currency-box {
+  padding: 6px 12px;      /* iç boşluğu azalt */
+  border: 1px solid #ccc; /* çerçeveyi incelt */
+  border-radius: 6px;     /* köşeleri biraz küçült */
+  display: inline-block;
+}
+
+.currency-source {
+  font-size: 12px;        /* üst yazı */
+  font-weight: 600;
+}
+
+.currency-divider {
+  margin: 4px 0;          /* çizgi arası boşluk */
+}
+
+.currency-date {
+  font-size: 12px;        /* tarih satırı */
+  margin-bottom: 4px;
+}
+
+.currency-value {
+  font-size: 14px;        /* kur değeri */
+  font-weight: bold;
+}
+
+    .whatsapp-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .whatsapp-buttons a {
+      padding: 8px 12px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .whatsapp-buttons a img {
+      width: 30px;
+      height: 30px;
+    }
+    .whatsapp-buttons a .wp-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .note-button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #dc3545;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    @media (max-width: 480px) {
+      .group-buttons a {
+        min-width: 100%;
+      }
+    }
+  
+@media (max-width: 600px) {
+  .group-buttons {
+    grid-template-columns: 1fr !important;
+  }
+  .group-buttons a {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .group-buttons {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .group-buttons a {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .group-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .group-buttons a {
+    width: 100% !important;
+    text-align: center;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Sayfa boşluklarını sıkılaştır */
+.top-container {
+  margin-bottom: 8px !important;
+}
+.note-button {
+  margin-top: 6px !important;
+  margin-bottom: 10px !important;
+}
+h2 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.logo-image {
+  max-height: 55px;
+  width: auto;
+}
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+@media (max-width: 600px) {
+  .logo-title-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+    .wp-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+    .whatsapp-options {
+      justify-content: center;
+      gap: 10px;
+      margin-top: 5px;
+    }
+    .whatsapp-options button {
+      background-color: #25D366;
+      color: white;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: bold;
+    }
+    .whatsapp-options button img {
+      width: 16px;
+      height: 16px;
+    }
+    .details-btn {
+      background-color: #ffc107;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .details-btn:hover {
+      background-color: #e0a800;
+    }
+    
+    button,
+    .group-buttons a {
+      padding: 12px 14px;
+      font-size: 15px;
+    }
+
+    .product {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .whatsapp-options button {
+      font-size: 15px;
+      padding: 10px 14px;
+      gap: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .product h2 {
+        font-size: 18px;
+      }
+      .product p {
+        font-size: 13px;
+        margin: 3px 0;
+      }
+      .filter-bar {
+        padding: 0 10px;
+      }
+    }
+    
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+}
+
+#scrollTopBtn {
+  background-color: #007bff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#scrollTopBtn img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+    }
+    .filter-bar input,
+    .filter-bar select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .product {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-content {
+      padding-left: 10px;
+    }
+    .product h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      color: #555;
+    }
+    .product h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #222;
+    }
+    .product p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .product-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 10px;
+    }
+    .product-actions button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .order-btn {
+      background-color: #28a745;
+      color: white;
+    }
+    .whatsapp-options {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+	   justify-content: center; /* BU SATIRI EKLE */
+    }
+    .whatsapp-options button {
+      background-color: #25D366;
+      color: white;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+	.excel-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #217346;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.excel-link-button img {
+  width: 20px;
+  height: 20px;
+}
+.details-btn {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.details-btn:hover {
+  background-color: #e0a800;
+}
+
+.group-buttons a {
+  padding: 10px;
+  background: linear-gradient(to right, #d32f2f, #555);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  min-width: 150px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: background 0.3s ease;
+}
+.group-buttons a:hover {
+  background: linear-gradient(to right, #b71c1c, #333);
+}
+
+
+
+  
+.better {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+
+</style>
+<meta content="#007bff" name="theme-color"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-64H5BZVQED"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-64H5BZVQED');
+</script>
+
+<style>
+
+
+#compareBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#comparePopup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+}
+
+#comparePopup > div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+#comparePopup table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  background: #fff;
+  table-layout: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#comparePopup th,
+#comparePopup td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+#comparePopup th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#comparePopup td:first-child {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.product {
+  position: relative;
+}
+
+.better {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+
+</style>
+
+<div id="comparePopup">
+  <div>
+    <h3>Karşılaştırma</h3>
+    <div id="compareTableContainer"></div>
+    <button onclick="document.getElementById('comparePopup').style.display='none'" style="margin-top:10px;padding:8px 16px;border:none;background-color:#dc3545;color:white;border-radius:5px;">Kapat</button>
+  </div>
+</div>
+
+
+
+<style>
+#comparePopup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+}
+
+#comparePopup > div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 100%;
+  max-height: 90%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+#comparePopup table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#comparePopup th,
+#comparePopup td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+#comparePopup th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+#comparePopup td:first-child {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.better {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: bold;
+}
+
+
+</style>
+
+
+
+<style>
+/* Ortak yerleşim: solda dikey rozet metni */
+.product { position: relative; }
+.product::before {
+  content: attr(data-badge);
+  position: absolute;
+  top: 70%;
+  left: 20px;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  pointer-events: none;
+  white-space: nowrap;
+  display: none;   /* varsayılan: gizli */
+}
+
+/* ───────── TÜKENDİ (kırmızı) ───────── */
+.product.badge-soldout {
+  border-left: 4px solid #dc3545;
+  background-color: #fff5f5;
+}
+.product.badge-soldout::before {
+  color: #dc3545;
+  display: block;
+}
+
+/* ───────── ÖN SİPARİŞ (mavi + ikon) ───────── */
+@keyframes preorderBlink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0.4; }
+}
+.product.badge-preorder {
+  border-left: 4px solid #0d6efd;
+  background-color: #e6f0ff;
+  position: relative;
+}
+
+/* Dikey yazı + ikon + blink */
+.product.badge-preorder::before {
+  content: attr(data-badge);
+  position: absolute;
+  top: 75%;
+  left: 20px;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font-size: 30px;              /* yazı boyu */
+  font-weight: bold;
+  letter-spacing: 2px;
+  pointer-events: none;
+  white-space: nowrap;
+  color: #0d6efd;
+  display: block;
+
+  /* ikon arka planı */
+  padding-left: 40px;           /* ikon ile yazı arası boşluk */
+  background: url("https://raw.githubusercontent.com/dostiletisimtelefon/dostiletisimtelefon.github.io/refs/heads/main/pre-order.png")
+             no-repeat left center;
+  background-size: 30px auto;   /* ikon yüksekliği yazı (30px) ile aynı */
+
+  /* yanıp sönme efekti */
+  animation: preorderBlink 1.2s ease-in-out infinite;
+}
+
+/* ───────── YENİ MODEL (yeşil, yanıp-sönme) ───────── */
+@keyframes newBlink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+.product.badge-new {
+  border-left: 4px solid #198754;
+}
+.product.badge-new::before {
+  color: #198754;
+  display: block;
+  animation: newBlink 1.2s ease-in-out infinite;
+}
+</style>
+
+
+<style>
+<!-- removed old sticky -->
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .filter-bar-placeholder {
+    display: none;
+    height: 0px;
+  }
+  .filter-bar.sticky + .filter-bar-placeholder {
+    display: block;
+    height: 150px;
+  }
+</style>
+
+
+<style>
+  .filter-bar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #f4f4f4;
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: scale(0.95);
+    transition: all 0.2s ease;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    font-size: 14px;
+    padding: 6px 8px;
+    transition: all 0.2s ease;
+  }
+
+  .filter-bar-placeholder {
+    display: none;
+    height: 0px;
+  }
+
+  .filter-bar.sticky + .filter-bar-placeholder {
+    display: block;
+    height: 110px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .filter-bar.sticky {
+      transform: scale(0.90);
+      padding: 4px 6px;
+    }
+
+    .filter-bar input,
+    .filter-bar select {
+      font-size: 12px;
+      padding: 4px 6px;
+    }
+
+    .filter-bar.sticky + .filter-bar-placeholder {
+      height: 95px;
+    }
+  }
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterBar = document.querySelector(".filter-bar");
+    const placeholder = document.querySelector(".filter-bar-placeholder");
+    const stickyOffset = 250;
+
+    function checkSticky() {
+      if (!filterBar || !placeholder) return;
+      if (window.scrollY >= stickyOffset) {
+        filterBar.classList.add("sticky");
+        placeholder.style.display = "block";
+      } else {
+        filterBar.classList.remove("sticky");
+        placeholder.style.display = "none";
+      }
+    }
+
+    window.addEventListener("scroll", checkSticky);
+
+function updateStoktaYokGorunum() {
+  document.querySelectorAll(".product").forEach(p => {
+    // Temizle
+    p.classList.remove("badge-soldout","badge-preorder","badge-new","stokta-yok");
+    p.removeAttribute("data-badge");
+
+    // 1) Fiyat kontrolü (ÖNCELİK BURADA)
+    const fiyatText = p.querySelector("p:nth-of-type(2)"); // "TL Fiyat: ..." satırı
+    let isSoldOutByPrice = false;
+    if (fiyatText) {
+      const fiyat = fiyatText.textContent.replace(/[^\d]/g, "");
+      const fiyatDegeri = parseInt(fiyat, 10);
+      if (isNaN(fiyatDegeri) || fiyatDegeri === 0) {
+        isSoldOutByPrice = true;
+      }
+    }
+    if (isSoldOutByPrice) {
+      p.classList.add("badge-soldout");
+      p.setAttribute("data-badge", "TÜKENDİ");
+      return; // Fiyat yoksa diğer rozetlere bakma
+    }
+
+    // 2) Model etiketleri (ham model adı üzerinden)
+    const rawModel =
+      (p.getAttribute("data-raw-model") ||
+       p.querySelector("h2")?.textContent ||
+       "").toLocaleUpperCase('tr-TR');
+
+    // (ÖS) → ÖN SİPARİŞ
+    if (/\(\s*ÖS\s*\)/.test(rawModel)) {
+      p.classList.add("badge-preorder");
+      p.setAttribute("data-badge", "ÖN SİPARİŞ");
+      return;
+    }
+
+    // (YENİ MODEL) → YENİ MODEL
+    if (/\(\s*YENİ\s*MODEL\s*\)/.test(rawModel)) {
+      p.classList.add("badge-new");
+      p.setAttribute("data-badge", "YENİ MODEL");
+      return;
+    }
+
+    // Diğer durumlarda rozet yok
+  });
+}
+
+    const listContainer = document.querySelector(".product-list");
+    const observer = new MutationObserver(() => {
+      setTimeout(() => {
+        checkSticky();
+        updateStoktaYokGorunum();
+
+        
+      }, 100);
+    });
+
+    if (listContainer) {
+      observer.observe(listContainer, { childList: true, subtree: true });
+    }
+
+    updateStoktaYokGorunum();
+  });
+</script>
+
+</head><body><div class="top-container">
+<div class="logo-title-container">
+<img alt="Logo" class="logo-image" src="https://i.hizliresim.com/56pyamb.png"/>
+<div class="logo-text">DOST İLETİŞİM</div>
+</div>
+<div class="group-buttons">
+<a href="https://t.me/dostiletisim">
+<img alt="Telegram" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"/>
+        Telegram Grubumuz
+      </a>
+<a href="https://www.facebook.com/groups/1464553127213003">
+<img alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"/>
+        Facebook Grubumuz
+      </a>
+<a href="https://chat.whatsapp.com/FNZPJ3t5af8JWPBiNowM0z">
+<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
+        WhatsApp Grubumuz
+      </a>
+<a href="https://www.facebook.com/share/p/1A1yxwa1jd/">
+<img alt="Referans" src="https://cdn-icons-png.flaticon.com/512/535/535234.png"/>
+        Referanslarımız
+      </a>
+</div>
+<div class="currency-box">
+<div class="currency-source">Haremaltın.com Dolar Kuru</div>
+<div class="currency-divider"></div>
+<div class="currency-date" id="kurSaati">Kur tarihi: yükleniyor...</div>
+<div class="currency-value">Güncel Dolar Kuru: <span id="dolarKuru">₺ yükleniyor...</span></div>
+</div>
+<div class="whatsapp-buttons">
+<a href="https://wa.me/905356419868" target="_blank">
+<img alt="WP" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
+<div class="wp-text">
+<span>Miskin ADAK</span>
+<span>0535 641 9868</span>
+</div>
+</a>
+<a href="https://wa.me/905369973191" target="_blank">
+<img alt="WP" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/>
+<div class="wp-text">
+<span>Murat UĞUR</span>
+<span>0536 997 3191</span>
+</div>
+</a>
+</div>
+	<a class="excel-link-button" href="https://dostiletisimmardin.github.io/diger.html" target="_blank">
+<img alt="Excel" src="https://cdn-icons-png.flaticon.com/512/8023/8023928.png"/>
+  Kişisel Bakım - Temizlik Ve Diğer Ürünler İçin Tıklayın
+</a>
+<a class="excel-link-button" href="https://docs.google.com/spreadsheets/d/1XyJnvfIgQIdADqNj0kF3_kH-2-zE2cTcb_HhCcj-flE/edit?usp=sharing" target="_blank">
+<img alt="Excel" src="https://cdn-icons-png.flaticon.com/512/732/732220.png"/>
+  Fiyatlara Excel Üzerinden Ulaşmak İçin Tıklayın
+</a>
+<a class="note-button" href="#"><span onclick="openNotePopup()" style="cursor:pointer;">SİPARİŞ VERMEDEN ÖNCE MUTLAKA OKUYUN - SSS</span></a>
+</div><script>
+    fetch("https://opensheet.elk.sh/1XyJnvfIgQIdADqNj0kF3_kH-2-zE2cTcb_HhCcj-flE/veriver")
+      .then(res => res.json())
+      .then(data => {
+        const kurSatiri = data.find(row => row["DOLARKURU"] && row["DOLARSAAT"]);
+        if (kurSatiri) {
+          document.getElementById("dolarKuru").innerText = `${kurSatiri["DOLARKURU"]}`;
+          document.getElementById("kurSaati").innerText = `Kur tarihi: ${kurSatiri["DOLARSAAT"]}`;
+        }
+      })
+      .catch(err => {
+        document.getElementById("dolarKuru").innerText = "Veri alınamadı";
+        document.getElementById("kurSaati").innerText = "";
+        console.error("Kur bilgisi alınamadı:", err);
+      });
+  </script><h2>Telefon Fiyat Listesi</h2><div class="filter-bar">
+  
+
+<input id="manualSearch" oninput="applyFilters()" placeholder="Model ara..." type="text"/>
+<select id="brandInput" onchange="populateSeries(); applyFilters()">
+<option value="">Tüm Markalar</option>
+</select>
+<select id="seriesInput" onchange="applyFilters()">
+<option value="">Tüm Seriler</option>
+</select>
+<select id="ramInput" onchange="applyFilters()">
+<option value="">Tüm RAM/Hafıza</option>
+</select>
+<input id="maxPrice" oninput="applyFilters()" placeholder="Max ₺" type="number"/>
+</div>
+
+<div class="filter-bar-placeholder"></div>
+<div class="status-buttons">
+  <button type="button" id="btnNew" onclick="toggleStatus('new')">Yeni Modeller</button>
+  <button type="button" id="btnPre" onclick="toggleStatus('preorder')">Ön Sipariş</button>
+</div>
+<br>
+
+<div class="product-list" id="productList"></div><script>
+    const sheetUrl = "https://opensheet.elk.sh/1XyJnvfIgQIdADqNj0kF3_kH-2-zE2cTcb_HhCcj-flE/veriver";
+    let allProducts = [];
+
+    const brandSeriesMap = {
+      "xiaomi": ["Redmi Serisi", "Mi Serisi", "Poco Serisi"],
+      "infinix": ["Smart Serisi", "Hot Serisi", "Note Serisi", "GT Serisi", "Zero Serisi"],
+      "tecno mobile": ["Spark Serisi", "Pova Serisi", "Camon Serisi"],
+      "samsung": ["Ultra Serisi", "Flip Serisi", "Saat Serisi", "Fold Serisi"],
+      "google": ["Pixel Serisi"],
+      "iphone": ["Değişim Serisi", "Saat Serisi"]
+    };
+
+    function normalizeTR(str) {
+      return str.toLocaleLowerCase("tr")
+        .replace(/ç/g, 'c')
+        .replace(/ş/g, 's')
+        .replace(/ğ/g, 'g')
+        .replace(/ü/g, 'u')
+        .replace(/ö/g, 'o')
+        .replace(/ı/g, 'i');
+    }
+
+    function getBrandFromModel(model) {
+      const m = normalizeTR(model);
+      if (m.includes("degisim")) return "iPhone Değişim";
+      if (m.includes("redmi") || m.includes("poco") || m.includes("mi ") || m.includes("xiaomi")) return "Xiaomi";
+      if (m.includes("infinix")) return "Infinix";
+      if (m.includes("spark") || m.includes("pova") || m.includes("camon") || m.includes("tecno")) return "Tecno Mobile";
+      if ((m.includes("samsung") || m.includes("z fold") || m.includes("z flip")) || (m.includes("samsung s") && !m.includes("watch"))) return "Samsung";
+      if (m.includes("pixel") || m.includes("google")) return "Google";
+      if (m.includes("redmagic")) return "RedMagic";
+      if (m.includes("nubia")) return "Nubia";
+      if (m.includes("oneplus")) return "OnePlus";
+      if (m.includes("iphone")) return "iPhone";
+	  if (m.includes("tablet")) return "Tablet";
+      if (m.includes("tablet")) return "Tablet";
+      return "Diğer";
+    }
+
+    function getSeriesFromModel(model) {
+  const m = normalizeTR(model);
+  const original = model.toLowerCase();
+
+  if (m.includes("redmi")) return "Redmi Serisi";
+  if (m.includes("poco")) return "Poco Serisi";
+  if (m.includes("mi ")) return "Mi Serisi";
+  if (m.includes("smart")) return "Smart Serisi";
+  if (m.includes("hot")) return "Hot Serisi";
+  if (m.includes("note")) return "Note Serisi";
+  if (m.includes("gt")) return "GT Serisi";
+  if (m.includes("zero")) return "Zero Serisi";
+  if (m.includes("spark")) return "Spark Serisi";
+  if (m.includes("pova")) return "Pova Serisi";
+  if (m.includes("camon")) return "Camon Serisi";
+
+  // 👇 Samsung Watch önce kontrol ediliyor
+  if (m.includes("samsung watch")) return "Saat Serisi";
+
+  // 👇 Ultra serisi için watch geçmeyen s23-s25
+  if ((m.includes("s23") || m.includes("s24") || m.includes("s25")) && !m.includes("watch")) return "Ultra Serisi";
+
+  if (m.includes("z flip")) return "Flip Serisi";
+  if (m.includes("z fold")) return "Fold Serisi";
+  if (m.includes("pixel")) return "Pixel Serisi";
+  if ((original.includes("iphone") || m.includes("iphone")) && m.includes("iphone watch")) return "Saat Serisi";
+  if (m.includes("(d)")) return "Değişim Serisi";
+  return "";
+}
+    
+let statusFilter = ""; // global değişken
+
+function toggleStatus(type) {
+  // aynı butona tekrar basılırsa kaldır
+  if (statusFilter === type) {
+    statusFilter = "";
+  } else {
+    statusFilter = type;
+  }
+
+  // aktif classlarını güncelle
+  document.getElementById('btnNew').classList.toggle('active', statusFilter === 'new');
+  document.getElementById('btnPre').classList.toggle('active', statusFilter === 'preorder');
+
+  applyFilters();
+}
+    function applyFilters() {
+      const searchInput = normalizeTR(document.getElementById('manualSearch').value);
+      const ram = document.getElementById('ramInput').value;
+      const brand = document.getElementById('brandInput').value;
+      const series = document.getElementById('seriesInput').value;
+      const maxPriceInput = document.getElementById('maxPrice').value;
+      const maxPrice = maxPriceInput ? parseFloat(maxPriceInput.replaceAll('.', '').replace(',', '.')) : Infinity;
+
+      const filtered = allProducts.filter(p => {
+        const pModel = normalizeTR(p.model);
+        const pBrand = normalizeTR(p.marka);
+        const pRam = p.ram;
+        const pSeries = p.seri;
+        const pPriceRaw = (p.fiyat || "").replaceAll('.', '').replace(',', '.');
+        const pPrice = parseFloat(pPriceRaw);
+		const passesPriceFilter = isNaN(pPrice) ? (!maxPriceInput || maxPrice === Infinity) : pPrice <= maxPrice;
+let passesStatus = true;
+const modelForStatus = normalizeTR(p.model || ""); // ö/ü/ş/ı/İ → o/u/s/i...
+if (statusFilter === "new") {
+  passesStatus = /\(\s*yeni\s*model\s*\)/.test(modelForStatus);
+} else if (statusFilter === "preorder") {
+  passesStatus = /\(\s*os\s*\)/.test(modelForStatus); // (ÖS) → (os)
+}
+
+    return (!searchInput || pModel.includes(searchInput)) &&
+           (!brand || pBrand === brand) &&
+           (!series || pSeries === series) &&
+           (!ram || ram === pRam) &&
+           passesPriceFilter &&
+           passesStatus; // 👈 eklendi
+  });
+
+  renderProducts(filtered);
+}
+
+    function escapeCell(value) {
+      return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    }
+
+    function renderProducts(products) {
+      const container = document.getElementById('productList');
+      // Filtre değişince karşılaştırma seçimlerini kaybetme.
+      const checked = new Set(typeof selectedModels !== 'undefined' ? selectedModels : []);
+      const expandedIds = new Set(Array.from(container.querySelectorAll('tr.compact-details-row')).filter(r => !r.hidden).map(r => r.dataset.detailId));
+      container.innerHTML = '';
+      const table = document.createElement('table');
+      table.className = 'compact-price-table';
+      table.innerHTML = `<thead><tr><th>Sipariş</th><th>Model / İşlemler</th><th>RAM</th><th>Kayıt Durumu</th><th>$</th><th>₺ Fiyat</th></tr></thead><tbody></tbody>`;
+      const tbody = table.querySelector('tbody');
+      products.forEach(p => {
+        const priceRaw = String(p.fiyat || '').replaceAll('.', '').replace(',', '.');
+        const priceNum = parseFloat(priceRaw);
+        const showPrice = isNaN(priceNum) ? 'ŞİMDİLİK YOK' : `${p.fiyat} ₺`;
+        const id = `${p.model}-${p.ram}-${p.dolar}`;
+        const row = document.createElement('tr');
+        row.className = 'product';
+        row.dataset.rawModel = p.model;
+        row.dataset.model = normalizeTR(p.model);
+        row.dataset.ram = p.ram;
+        row.dataset.price = isNaN(priceNum) ? '9999999' : priceNum;
+        row.dataset.marka = normalizeTR(p.marka);
+        row.dataset.seri = p.seri;
+        row.innerHTML = `
+          <td><button type="button" class="compact-order">Sipariş<br>Ver</button></td>
+          <td class="compact-model"><span class="compact-model-name" role="button" tabindex="0" aria-expanded="false">${escapeCell(p.model)} <span class="detail-chevron">⌄</span></span><div class="compact-model-actions"><label class="compact-compare"><input type="checkbox" class="compare-checkbox" data-id="${escapeCell(id)}" ${checked.has(id) ? 'checked' : ''}> <span class="compare-word">Karşılaştır</span></label></div></td>
+          <td class="compact-ram">${escapeCell(p.ram)}</td>
+          <td class="compact-registration">${escapeCell(p.kayit)}</td>
+          <td class="compact-dollar">${escapeCell(p.dolar)}</td>
+          <td class="compact-price">${escapeCell(showPrice)}</td>`;
+        row.querySelector('.compact-order').addEventListener('click', () => {
+          openCompactOrder(p, showPrice);
+        });
+
+        row.querySelector('.compare-checkbox').addEventListener('change', updateCompareList);
+        tbody.appendChild(row);
+        const detailRow = document.createElement('tr');
+        detailRow.className = 'compact-details-row';
+        detailRow.dataset.detailId = id;
+        detailRow.hidden = !expandedIds.has(id);
+        const specs = String(p.specs || '').split(',').map(x => x.trim()).filter(Boolean);
+        const specHtml = specs.length ? `<div class="detail-specs">${specs.map(x => `<span>${escapeCell(x)}</span>`).join('')}</div>` : '<div class="detail-empty">Bu model için ek teknik özellik girilmemiş.</div>';
+        const detailLink = p.link && /^https?:\/\//i.test(p.link.trim()) ? `<a class="detail-link" href="${escapeCell(p.link.trim())}" target="_blank" rel="noopener noreferrer">Detaylı özellikler ↗</a>` : '';
+        detailRow.innerHTML = `<td colspan="6"><div class="detail-panel"><div class="detail-heading">${escapeCell(p.model)}</div><div class="detail-facts"><div><small>RAM / Hafıza</small><b>${escapeCell(p.ram || '—')}</b></div><div><small>Kayıt Durumu</small><b>${escapeCell(p.kayit || '—')}</b></div><div><small>Dolar</small><b>${escapeCell(p.dolar || '—')}</b></div><div><small>TL Fiyatı</small><b>${escapeCell(showPrice)}</b></div></div>${specHtml}${detailLink}</div></td>`;
+        tbody.appendChild(detailRow);
+        const trigger = row.querySelector('.compact-model-name');
+        const toggle = () => { detailRow.hidden = !detailRow.hidden; trigger.setAttribute('aria-expanded', String(!detailRow.hidden)); row.classList.toggle('detail-open', !detailRow.hidden); };
+        trigger.addEventListener('click', toggle);
+        trigger.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') {e.preventDefault();toggle();} });
+        if (!detailRow.hidden) {trigger.setAttribute('aria-expanded','true');row.classList.add('detail-open');}
+      });
+      container.appendChild(table);
+      // Var olan durum rozeti fonksiyonu kart yapısına göre yazılmıştı;
+      // kompakt satırlarda durum doğrudan model adından ve fiyattan belirlenir.
+      tbody.querySelectorAll('tr.product').forEach(row => {
+        const model = row.dataset.rawModel.toLocaleUpperCase('tr-TR');
+        const rawPrice = row.querySelector('.compact-price').textContent;
+        if (rawPrice.includes('ŞİMDİLİK YOK') || /^0(?:[.,]0+)?\s*₺?$/.test(rawPrice)) { row.classList.add('compact-soldout'); row.querySelector('.compact-order').outerHTML = '<span class="soldout-tag">TÜKENDİ</span>'; row.querySelector('.compact-dollar').textContent = '—'; row.querySelector('.compact-price').textContent = '—'; }
+        else if (/\(\s*ÖS\s*\)/.test(model)) row.classList.add('compact-preorder');
+        else if (/\(\s*YENİ\s*MODEL\s*\)/.test(model)) row.classList.add('compact-new');
+      });
+    }
+
+    function populateSeries() {
+      const brandValue = normalizeTR(document.getElementById('brandInput').value);
+      const seriesInput = document.getElementById('seriesInput');
+      seriesInput.innerHTML = '<option value="">Tüm Seriler</option>';
+      const seriesList = brandSeriesMap[brandValue];
+      if (seriesList) {
+        seriesList.forEach(ser => {
+          const opt = document.createElement('option');
+          opt.value = ser;
+          opt.textContent = ser;
+          seriesInput.appendChild(opt);
+        });
+      }
+    }
+
+    function populateFilters(products) {
+      const ramSet = new Set();
+      const brandSet = new Set();
+      products.forEach(p => {
+        if (p.ram) ramSet.add(p.ram);
+        if (p.marka) brandSet.add(p.marka);
+      });
+      const ramSelect = document.getElementById('ramInput');
+      ramSet.forEach(ram => {
+        const opt = document.createElement('option');
+        opt.value = ram;
+        opt.textContent = ram;
+        ramSelect.appendChild(opt);
+      });
+      const brandSelect = document.getElementById('brandInput');
+      brandSet.forEach(brand => {
+        const opt = document.createElement('option');
+        opt.value = normalizeTR(brand);
+        opt.textContent = brand;
+        brandSelect.appendChild(opt);
+      });
+    }
+
+    function showWhatsAppOptions(button, model, ram, price) {
+      const container = button.parentElement.querySelector('.whatsapp-options');
+      container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function sendWhatsApp(number, model, ram, price) {
+  const message =
+    `Merhaba\n` +
+    `Sipariş Vermek İstiyorum\n` +
+    `Model: ${model}\n` +
+    `RAM: ${ram}\n` +
+    `Fiyat: ${price}`;
+  const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+    fetch(sheetUrl)
+  .then(res => res.json())
+  .then(data => {
+    allProducts = data.map(row => {
+      const model = row["MODEL"] || "";
+      return {
+        marka: getBrandFromModel(model),
+        seri: getSeriesFromModel(model),
+        model: model,
+        link: row["DETAY"] || "",  // <<< BURADA
+        ram: row["RAM VE HAFIZA"] || "",
+        kayit: row["KAYIT DURUMU"] || "",
+        dolar: row["DOLAR FİYATI"] || "",
+        fiyat: row["TL FİYATI"] || "",
+		specs: row["SPECS"] || ""
+      };
+    });
+        populateFilters(allProducts);
+        renderProducts(allProducts);
+      });
+  </script><button id="scrollTopBtn" onclick="scrollToTop()"><img alt="↑" src="https://cdn-icons-png.flaticon.com/512/130/130906.png"/></button><script>
+window.onscroll = function() {
+  document.getElementById("scrollTopBtn").style.display =
+    document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 ? "block" : "none";
+};
+
+
+</script>
+<div id="orderPopup" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center;">
+<div style="background: white; padding: 20px; border-radius: 10px; max-width: 320px; width: 90%; text-align: center;">
+<h3>Sipariş Detayı</h3>
+<p id="popupText"></p>
+<button id="popupConfirm" style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 10px; font-weight: bold;">📦 Siparişe Devam Et</button><br/>
+<button onclick="closePopup()" style="margin-top: 10px; background-color: #ccc; padding: 8px 16px; border: none; border-radius: 5px;">İptal</button>
+</div>
+</div>
+<script>
+let popupNumber = "", popupMessage = "";
+
+function sendWhatsApp(number, model, ram, price) {
+  popupNumber = number;
+  popupMessage =
+  `Merhaba\n` +
+  `Sipariş Vermek İstiyorum\n` +
+  `Model: ${model}\n` +
+  `RAM: ${ram}\n` +
+  `Fiyat: ${price}`;
+  const popup = document.getElementById('orderPopup');
+  if (popup) {
+    document.getElementById('popupText').innerText = popupMessage;
+    popup.style.display = 'flex';
+  }
+}
+
+
+function closePopup() {
+  const popup = document.getElementById('orderPopup');
+  if (popup) {
+    popup.style.display = 'none';
+  }
+}
+
+window.onload = function() {
+  const confirmBtn = document.getElementById('popupConfirm');
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
+      const url = `https://wa.me/${popupNumber}?text=${encodeURIComponent(popupMessage)}`;
+      window.open(url, '_blank');
+      closePopup();
+    });
+  }
+};
+</script>
+<!-- SSS / Sipariş Notları Popup -->
+<div id="popupNote" style="display:none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); overflow-y: auto;">
+  <div style="background: white; max-width: 600px; height: 90vh; overflow-y: auto; box-sizing: border-box; margin: 60px auto; padding: 25px 20px 100px; border-radius: 10px; position: relative; font-size: 14px; line-height: 1.6; text-align:left; color:#333;">
+
+    <!-- Sağ üst kapat -->
+    <button onclick="closeNotePopup()" style="position: absolute; top: 10px; right: 12px; background: #dc3545; color: white; border: none; border-radius: 4px; padding: 5px 12px; cursor: pointer;">Kapat</button>
+
+    <h2 style="margin-top:0; color:#007bff;">❓ Sıkça Sorulan Sorular (SSS)</h2>
+
+    <p><strong>📌 Satılan telefonlar kayıtlı mı?</strong><br>Hayır, tüm cihazlar yurt dışı ve kayıtsızdır. Ancak "Kayıtlı" olarak belirtilen modeller kayıtlı şekilde gönderilir.</p>
+
+    <p><strong>📌 IMEI kaydı yapıyor musunuz?</strong><br>Evet, modele göre <u>Dirençle</u>, <u>CPID</u> ya da <u>Server (Samsung)</u> kaydı yapılabilir. Kayıt yöntemi ve ücreti ürün açıklamasında belirtilir. Dilerseniz kendi IMEI’nizi verebilirsiniz.</p>
+
+    <p><strong>📌 Atılan IMEI’lerin garantisi var mı?</strong><br>Atılan IMEI’ler garanti kapsamında değildir. Klona düşme/kopyalanma durumunda sorun uygun fiyatla uzaktan bağlantı yoluyla çözülebilir.</p>
+
+    <p><strong>📌 Telefonlar orijinal mi?</strong><br>Evet. Tüm cihazlarımız %100 orijinal, sıfır ve kullanılmamış ürünlerdir.</p>
+
+    <p><strong>📌 iPhone Değişim Cihazı Nedir?</strong><br>Apple’ın garanti kapsamında arızalı cihazlar karşılığında verdiği <u>yenilenmiş</u>, sıfır ve <u>kapalı kutulu</u> cihazlardır.</p> 	  
+    
+    <p><strong>📌 Şarj cihazı orijinal mi?</strong><br>Kutu içeriğinde şarj cihazı varsa orijinal olarak, yoksa Xiaomi marka adaptörle gönderilir.</p>
+
+    <p><strong>📌 Siparişim ne zaman kargoya verilir?</strong><br>EFT ödemesi mesai saatleri içinde yapıldıysa genellikle aynı gün kargoya verilir. Kargo alımı olmazsa gönderim ertesi güne kalabilir.</p>
+
+    <p><strong>📌 Garanti var mı?</strong><br>Cihazlarımız aksi belirtilmedikçe garanti kapsamında değildir. İlk kullanımda sorun yaşanırsa, video kayıtlı teslimatla ilk gün değişim sağlanır.</p>
+
+    <p><strong>📌 Kargoda risk olursa ne olur?</strong><br>Çalınma, kaybolma, el konulması gibi durumlar alıcı sorumluluğundadır. Teslim alırken mutlaka video ile kutu açılışı yapılmalıdır.</p>
+
+    <hr style="margin: 20px 0;">
+
+    <h3 style="color:#007bff;">📌 Kayıt Yöntemleri</h3>
+
+    <p><strong>• Server Kaydı:</strong> Samsung cihazlara yazılımsal IMEI işlemi uygulanır. Hurda Samsung cihaz IMEI’si gereklidir. Kayıt sonrası oluşabilecek sorunların sorumluluğu kullanıcıya aittir.</p>
+
+    <p><strong>• Direnç Kaydı:</strong> Anakart üzerindeki direnç çipine işlem uygulanarak yapılan fiziksel kayıt yöntemidir.</p>
+
+    <p><strong>• CPID Kaydı:</strong> Xiaomi cihazlarda uygulanan tek SIM destekli yazılımsal kayıt yöntemidir. Uzaktan yapılır, cihaz sıfırlanır. Sadece 1 adet şahsi IMEI girilebilir.</p>
+
+    <!-- ALTTA SOLDA KAPAT BUTONU -->
+    <div style="margin-top: 30px; text-align: center;">
+  <button onclick="closeNotePopup()" style="
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+  ">Kapat</button>
+</div>
+
+  </div>
+</div>
+
+<!-- Aç/Kapat Fonksiyonu -->
+<script>
+  function openNotePopup() {
+    document.getElementById('popupNote').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNotePopup() {
+    document.getElementById('popupNote').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+</script>
+
+
+<footer style="text-align: center; margin-top: 40px; padding: 20px; background: #f0f0f0; border-top: 1px solid #ccc;">
+  <div style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 8px;">
+    👁️ Sayfa Görüntülenme Sayısı
+  </div>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=dostiletisimtelefon.github.io.fiyatlistesi&left_text=Ziyaretçi" alt="Ziyaretçi Sayacı" style="height: 30px;"/>
+</footer>
+
+
+
+<script>
+let selectedModels = [];
+
+function updateCompareList() {
+  const checkboxes = document.querySelectorAll('.compare-checkbox');
+  selectedModels = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.dataset.id);
+  document.getElementById('compareBtn').style.display = selectedModels.length >= 2 ? 'block' : 'none';
+}
+
+function openComparePopup() {
+  const compareData = allProducts.filter(p => selectedModels.includes(`${p.model}-${p.ram}-${p.dolar}`));
+
+  const tableRows = {};
+
+  compareData.forEach((p, index) => {
+    const specs = {
+      "Model": p.model,
+      "RAM": p.ram,
+      "TL Fiyat": p.fiyat,
+      "Dolar": p.dolar,
+      "Kayıt": p.kayit
+    };
+
+    const rawSpecs = (p.specs || "").split(',');
+    rawSpecs.forEach(s => {
+      const [key, val] = s.split(':');
+      if (key && val) specs[key.trim()] = val.trim();
+    });
+
+    Object.entries(specs).forEach(([ozellik, deger]) => {
+      if (!tableRows[ozellik]) tableRows[ozellik] = [];
+      tableRows[ozellik][index] = deger;
+    });
+  });
+
+  let html = `
+    <div style="overflow-x:auto;">
+      <table>
+        <tr style="background-color:#f0f0f0;">
+          <th>Özellik</th>
+          ${compareData.map((_, i) => `<th>Ürün ${i + 1}</th>`).join('')}
+        </tr>
+  `;
+
+  Object.entries(tableRows).forEach(([ozellik, degerListesi]) => {
+    html += `<tr><td>${ozellik}</td>`;
+    for (let i = 0; i < compareData.length; i++) {
+      html += `<td>${degerListesi[i] || '-'}</td>`;
+    }
+    html += `</tr>`;
+  });
+
+  html += `
+      </table>
+    </div>
+  `;
+
+  document.getElementById("compareTableContainer").innerHTML = html;
+  document.getElementById("comparePopup").style.display = "flex";
+}
+</script>
+
+
+<button onclick="openComparePopup()" id="compareBtn"
+style="display: none; position: fixed; bottom: 80px; left: 25px; z-index: 9999;
+background: #007bff; color: white; border: none; padding: 10px 16px;
+border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); cursor: pointer;">
+🔍 Karşılaştır
+</button>
+
+
+<style>
+/* Kompakt fiyat listesi: mobil ve masaüstünde aynı yatay satır düzeni */
+.product-list {display:block;max-width:1100px;width:100%;overflow-x:auto;margin:0 auto;}
+.compact-price-table {width:100%;border-collapse:collapse;table-layout:fixed;background:#d1e1fa;font-family:Arial,sans-serif;}
+.compact-price-table th,.compact-price-table td {border:1px solid #9daec6;text-align:center;vertical-align:middle;padding:8px 5px;overflow-wrap:anywhere;}
+.compact-price-table th {background:#a9c4ec;font-size:12px;}
+.compact-price-table tr.product {display:table-row;position:static;background:#d1e1fa;box-shadow:none;border:0;border-radius:0;transform:none;}
+.compact-price-table tr.product:nth-child(even) {background:#c4d7f5;}
+.compact-price-table tr.product::before {display:none!important;content:none!important;}
+.compact-price-table tr.product.compact-soldout {background:#ffe0e0;}
+.compact-price-table tr.product.compact-preorder {background:#d6e7ff;}
+.compact-price-table tr.product.compact-new {background:#d8f2dc;}
+.compact-price-table th:nth-child(1){width:11%;}.compact-price-table th:nth-child(2){width:23%;}.compact-price-table th:nth-child(3){width:12%;}.compact-price-table th:nth-child(4){width:26%;}.compact-price-table th:nth-child(5){width:10%;}.compact-price-table th:nth-child(6){width:18%;}
+.compact-price-table td {font-size:12px;font-weight:600;line-height:1.3;}
+.compact-model a {color:#0058b5;font-weight:700;text-decoration:underline;}
+.compact-compare {display:block;font-size:10px;font-weight:400;margin-top:5px;cursor:pointer;}
+.compact-compare input {vertical-align:middle;width:13px;height:13px;margin:0;}
+.compact-order {border:0;background:none;color:#0058b5;text-decoration:underline;cursor:pointer;font-size:12px;font-weight:700;padding:2px;}
+.compact-wa[hidden] {display:none!important;}.compact-wa {display:flex;flex-direction:column;gap:3px;margin-top:4px;}
+.compact-wa button {padding:3px 2px;font-size:10px;border:1px solid #9cabc1;border-radius:3px;background:white;cursor:pointer;}
+.compact-registration {background:#b8d9a8;font-size:11px!important;}
+.compact-dollar,.compact-price {font-weight:700!important;}
+@media(max-width:600px){body{padding:8px!important;}.compact-price-table th,.compact-price-table td{padding:6px 2px;}.compact-price-table th{font-size:9px;}.compact-price-table td{font-size:10px;}.compact-registration{font-size:9px!important;}.compact-order{font-size:10px;padding:0;}.compact-compare{font-size:9px;}.compact-price-table th:nth-child(1){width:11%;}.compact-price-table th:nth-child(2){width:25%;}.compact-price-table th:nth-child(3){width:12%;}.compact-price-table th:nth-child(4){width:25%;}.compact-price-table th:nth-child(5){width:10%;}.compact-price-table th:nth-child(6){width:17%;}}
+</style>
+
+<!-- Kompakt sipariş seçimi -->
+<div id="compactOrderModal" class="compact-modal" hidden role="dialog" aria-modal="true" aria-labelledby="compactModalTitle">
+  <div class="compact-modal-panel">
+    <button type="button" class="compact-modal-close" aria-label="Kapat" onclick="closeCompactOrder()">×</button>
+    <div class="compact-modal-symbol">✦</div>
+    <h3 id="compactModalTitle">Sipariş Oluştur</h3>
+    <p class="compact-modal-sub">WhatsApp üzerinden iletişime geçeceğiniz kişiyi seçin.</p>
+    <div class="compact-modal-product" id="compactModalProduct"></div>
+    <div class="compact-modal-contacts">
+      <button type="button" data-number="905369973191" onclick="submitCompactOrder(this.dataset.number)"><span class="wa-circle">☎</span><span>Murat Uğur<small>WhatsApp ile sipariş ver</small></span><span class="contact-arrow">›</span></button>
+      <button type="button" data-number="905356419868" onclick="submitCompactOrder(this.dataset.number)"><span class="wa-circle">☎</span><span>Miskin Adak<small>WhatsApp ile sipariş ver</small></span><span class="contact-arrow">›</span></button>
+    </div>
+  </div>
+</div>
+<script>
+let compactOrderSelection = null;
+function openCompactOrder(product, price) {
+  compactOrderSelection = {product, price};
+  document.getElementById('compactModalProduct').textContent = `${product.model}  •  ${product.ram}  •  ${price}`;
+  document.getElementById('compactOrderModal').hidden = false;
+}
+function closeCompactOrder() { document.getElementById('compactOrderModal').hidden = true; }
+function submitCompactOrder(number) {
+  if (!compactOrderSelection) return;
+  const {product,price} = compactOrderSelection;
+  closeCompactOrder();
+  sendWhatsApp(number, product.model, product.ram, price);
+}
+document.getElementById('compactOrderModal').addEventListener('click', e => {if (e.target.id === 'compactOrderModal') closeCompactOrder();});
+document.addEventListener('keydown', e => {if (e.key === 'Escape') closeCompactOrder();});
+</script>
+<style>
+/* Karşılaştırma: seçildiğinde görünür tik */
+.compact-compare {display:inline-flex!important;align-items:center;justify-content:center;gap:4px;padding:4px 6px;border:1px solid #a4b8d6;border-radius:6px;background:#eef4ff;font-weight:600!important;line-height:1.1;max-width:100%;box-sizing:border-box;}
+.compact-compare input {appearance:none;-webkit-appearance:none;width:14px!important;height:14px!important;min-width:14px;border:1.5px solid #7293c1;border-radius:4px;background:white;position:relative;cursor:pointer;}
+.compact-compare input:checked {background:#15803d;border-color:#15803d;}
+.compact-compare input:checked::after {content:'✓';position:absolute;left:2px;top:-3px;color:white;font-size:13px;font-weight:900;}
+.compact-compare:has(input:checked) {background:#dcfce7;border-color:#86cba1;color:#166534;}
+.compact-order {border:1px solid #1268c2!important;border-radius:6px!important;background:#e9f2ff!important;color:#07529d!important;text-decoration:none!important;padding:7px 4px!important;line-height:1.1;box-shadow:0 1px 3px #0001;}
+.compact-order:hover {background:#d3e7ff!important;}
+.compact-price-table tr.product.compact-soldout {background:#e8e9ed!important;color:#707782;}
+.compact-soldout td:not(.compact-registration) {opacity:.72;}
+.compact-soldout .compact-model a {color:#777!important;}
+.soldout-tag {display:inline-block;color:#a52b37;border:1px solid #d8a4a9;background:#fff0f1;border-radius:5px;padding:5px 3px;font-size:10px;font-weight:900;letter-spacing:.3px;transform:rotate(-5deg);opacity:1!important;}
+.compact-modal[hidden] {display:none!important;}
+.compact-modal {position:fixed;inset:0;z-index:20000;background:rgba(12,24,45,.66);display:flex;align-items:center;justify-content:center;padding:14px;box-sizing:border-box;backdrop-filter:blur(3px);}
+.compact-modal-panel {position:relative;width:min(440px,100%);background:white;border-radius:18px;padding:25px 20px 22px;box-shadow:0 24px 65px #0004;text-align:center;box-sizing:border-box;}
+.compact-modal-close {position:absolute;right:14px;top:14px;display:flex;align-items:center;justify-content:center;border:1px solid #d8e2ec;background:#f1f6fd;color:#34516e;border-radius:10px;width:36px;height:36px;padding:0!important;font-family:Arial,sans-serif;font-size:23px;line-height:1;font-weight:400;cursor:pointer;box-shadow:0 2px 6px rgba(24,48,80,.08);transition:background .2s,color .2s,border-color .2s;}.compact-modal-close:hover {background:#e1edfa;color:#153f68;border-color:#a9c6e5;}.compact-modal-close:focus-visible {outline:2px solid #2878ca;outline-offset:2px;}
+.compact-modal-symbol {font-size:25px;color:#16834c;}
+.compact-modal-panel h3 {margin:5px 0 7px;font-size:22px;color:#1d2939;}
+.compact-modal-sub {font-size:13px;color:#667085;margin:0 0 15px;}
+.compact-modal-product {background:#f1f6fd;border:1px solid #dbe8f7;padding:12px;border-radius:10px;font-size:13px;font-weight:700;color:#254368;margin-bottom:16px;line-height:1.5;}
+.compact-modal-contacts {display:grid;gap:10px;}
+.compact-modal-contacts button {width:100%;display:flex;align-items:center;text-align:left;gap:12px;padding:13px 14px;border:1px solid #d1e8db;border-radius:11px;background:#f5fcf7;cursor:pointer;color:#163a27;font-size:15px;font-weight:750;transition:background .15s,transform .15s;}
+.compact-modal-contacts button:hover {background:#e2f7e9;transform:translateY(-1px);}
+.compact-modal-contacts small {display:block;font-size:11px;font-weight:400;color:#52715d;margin-top:3px;}
+.wa-circle {width:37px;height:37px;border-radius:50%;background:#22c55e;color:white;display:grid;place-items:center;font-size:22px;flex:none;}
+.contact-arrow {margin-left:auto;font-size:26px;color:#20a455;}
+@media(max-width:600px) {.compact-compare {font-size:9px!important;padding:3px 2px;gap:2px;}.compact-compare input {width:12px!important;height:12px!important;min-width:12px;}.compact-compare input:checked::after {font-size:11px;top:-2px;left:1px;}.compact-order {font-size:10px!important;padding:5px 2px!important;}.soldout-tag {font-size:8px;padding:4px 1px;letter-spacing:0;}}
+</style>
+
+<style id="compact-v3-mobile">
+/* V3: telefonda yatay kaydırmasız, dar ama okunabilir tablo */
+html,body {max-width:100%;overflow-x:clip;}
+#productList {width:100%;max-width:100%;min-width:0;overflow:visible;}
+.compact-price-table {width:100%!important;max-width:100%;min-width:0;table-layout:fixed!important;}
+.compact-price-table th,.compact-price-table td {box-sizing:border-box;min-width:0;overflow-wrap:normal;word-break:normal;}
+.compact-model a {display:block;overflow-wrap:break-word;word-break:normal;line-height:1.25;}
+.compact-compare {display:flex!important;width:max-content;max-width:100%;margin:4px auto 0!important;white-space:nowrap;}
+.compact-compare:has(input:checked) .compare-word {font-size:0;}
+.compact-compare:has(input:checked) .compare-word::after {content:'Seçildi';font-size:10px;}
+.compact-dollar,.compact-price,.compact-ram {white-space:nowrap;}
+.soldout-tag {white-space:nowrap;transform:rotate(-4deg);}
+.compact-price-table tr.product.compact-soldout td.compact-dollar,
+.compact-price-table tr.product.compact-soldout td.compact-price {color:#9aa1ab;opacity:1;}
+@media(max-width:600px) {
+ body {padding:4px!important;box-sizing:border-box;}
+ .product-list {width:100%!important;max-width:100%!important;}
+ .compact-price-table th:nth-child(1){width:13%!important;}
+ .compact-price-table th:nth-child(2){width:25%!important;}
+ .compact-price-table th:nth-child(3){width:12%!important;}
+ .compact-price-table th:nth-child(4){width:25%!important;}
+ .compact-price-table th:nth-child(5){width:9%!important;}
+ .compact-price-table th:nth-child(6){width:16%!important;}
+ .compact-price-table th,.compact-price-table td {padding:5px 1px!important;}
+ .compact-price-table th {font-size:clamp(7px,2.05vw,10px)!important;line-height:1.1;}
+ .compact-price-table td {font-size:clamp(8px,2.35vw,11px)!important;line-height:1.22;}
+ .compact-model a {font-size:clamp(8px,2.35vw,11px)!important;}
+ .compact-registration {font-size:clamp(7px,1.95vw,9px)!important;overflow-wrap:break-word!important;}
+ .compact-ram,.compact-dollar,.compact-price {font-size:clamp(8px,2.1vw,10px)!important;letter-spacing:-.25px;}
+ .compact-compare {padding:3px 2px!important;gap:3px!important;font-size:clamp(7px,1.9vw,9px)!important;}
+ .compact-compare input {flex:none;width:11px!important;min-width:11px!important;height:11px!important;}
+ .compact-compare:has(input:checked) .compare-word::after {font-size:clamp(7px,1.9vw,9px);}
+ .compact-order {font-size:clamp(8px,2.1vw,10px)!important;padding:5px 1px!important;}
+ .soldout-tag {font-size:clamp(7px,1.85vw,9px)!important;padding:4px 1px!important;letter-spacing:-.2px!important;}
+}
+@media(max-width:360px) {
+ .compact-price-table th:nth-child(1){width:14%!important;}
+ .compact-price-table th:nth-child(2){width:25%!important;}
+ .compact-price-table th:nth-child(3){width:12%!important;}
+ .compact-price-table th:nth-child(4){width:24%!important;}
+ .compact-price-table th:nth-child(5){width:9%!important;}
+ .compact-price-table th:nth-child(6){width:16%!important;}
+}
+</style>
+<style id="compact-v6-expandable">
+.compact-model-name{display:block;color:#075bb4;font-weight:700;line-height:1.25;cursor:pointer;overflow-wrap:break-word;}
+.compact-model-name:focus-visible{outline:2px solid #0d6efd;border-radius:3px;}
+.detail-chevron{display:inline-block;font-size:13px;transition:transform .18s;vertical-align:middle;color:#4482bd;}
+.detail-open .detail-chevron{transform:rotate(180deg);}
+.compact-model-actions{display:flex;justify-content:center;margin-top:3px;}
+.compact-model-actions .compact-compare{margin:0!important;}
+.compact-details-row[hidden]{display:none!important;}
+.compact-price-table tr.compact-details-row td{padding:0!important;text-align:left!important;background:#f5f9ff!important;border-top:0!important;}
+.detail-panel{padding:13px 16px;border-left:3px solid #3684d4;box-shadow:inset 0 2px 6px #dce9f455;color:#24384f;}
+.detail-heading{font-weight:800;font-size:13px;margin-bottom:10px;color:#154d86;}
+.detail-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:10px;}
+.detail-facts>div{background:white;border:1px solid #e1eaf3;border-radius:7px;padding:8px;min-width:0;overflow-wrap:anywhere;}
+.detail-facts small{display:block;color:#6b7b8e;font-size:10px;margin-bottom:3px;}
+.detail-facts b{font-size:12px;}
+.detail-specs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0;}
+.detail-specs span{font-size:11px;background:#e7f1ff;border:1px solid #cde2fb;border-radius:5px;padding:5px 7px;}
+.detail-empty{font-size:11px;color:#768394;margin:8px 0;}
+.detail-link{display:inline-block;background:#1673c9;color:white!important;text-decoration:none;padding:8px 12px;border-radius:7px;font-size:12px;font-weight:700;margin-top:5px;}
+@media(max-width:600px){.detail-panel{padding:10px 9px}.detail-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.detail-facts>div{padding:6px}.detail-facts b{font-size:11px}.detail-heading{font-size:12px}.detail-specs span{font-size:10px}}
+</style>
+</body></html>
+
+<script>
+function openComparePopup() {
+  const compareData = allProducts.filter(p => selectedModels.includes(`${p.model}-${p.ram}-${p.dolar}`));
+
+  const tableRows = {};
+  const fiyatlar = [];
+  const ramlar = [];
+  const dynamicSpecs = new Set();
+
+  compareData.forEach((p, index) => {
+    const specs = {
+      "Model": p.model,
+      "RAM": p.ram,
+      "TL Fiyat": p.fiyat,
+      "Dolar": p.dolar,
+      "Kayıt": p.kayit
+    };
+
+    const rawSpecs = (p.specs || "").split(',');
+    let lastKey = null;
+    rawSpecs.forEach(s => {
+      const [key, val] = s.split(':');
+      if (key && val) {
+        const trimmedKey = key.trim();
+        const trimmedVal = val.trim();
+        if (!tableRows[trimmedKey]) tableRows[trimmedKey] = [];
+        tableRows[trimmedKey][index] = trimmedVal;
+        dynamicSpecs.add(trimmedKey);
+        lastKey = trimmedKey;
+      } else if (key && !val && lastKey) {
+        tableRows[lastKey][index] += ", " + s.trim();
+      }
+    });
+
+    fiyatlar.push(parseFloat((p.fiyat || "").replace(/\./g, "").replace(",", ".")));
+    const ramParts = (p.ram || "").split('/');
+    const ramSkor = ramParts.length === 2 ? parseInt(ramParts[0]) * 1000 + parseInt(ramParts[1]) : 0;
+    ramlar.push(ramSkor);
+
+    Object.entries(specs).forEach(([ozellik, deger]) => {
+      if (!tableRows[ozellik]) tableRows[ozellik] = [];
+      tableRows[ozellik][index] = deger;
+    });
+  });
+
+  const minFiyat = Math.min(...fiyatlar.filter(f => !isNaN(f)));
+  const maxRam = Math.max(...ramlar);
+
+  const sabitSiraliAlanlar = ["Model", "RAM", "TL Fiyat", "Dolar", "Kayıt"];
+  const digerAlanlar = Array.from(dynamicSpecs).filter(k => !sabitSiraliAlanlar.includes(k));
+  const tumSiraliAlanlar = [...sabitSiraliAlanlar, ...digerAlanlar];
+
+  let html = `<div style="overflow-x:auto;"><table>
+    <tr style="background-color:#f0f0f0;">
+      <th>Özellik</th>
+      ${compareData.map((_, i) => `<th>Ürün ${i + 1}</th>`).join('')}
+    </tr>`;
+
+  tumSiraliAlanlar.forEach(ozellik => {
+    html += `<tr><td>`;
+
+    // İkonlar
+if (ozellik.toLocaleLowerCase('tr-TR').includes("işlemci")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=1581&format=png&color=000000" alt="CPU" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("ekran")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=13616&format=png&color=000000" alt="Display" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("kamera")) {
+  html += `<img src="https://img.icons8.com/?size=100&id=xZiTPdO57ltQ&format=png&color=000000" alt="Camera" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("batarya")) {
+      html += `<img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png" alt="Battery" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("gpu")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=0I0uPU43WIqp&format=png&color=000000" alt="GPU" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("boyut")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=45958&format=png&color=000000" alt="Boyut" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("sensör")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=43386&format=png&color=000000" alt="Sensor" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("ram")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=16628&format=png&color=000000" alt="RAM" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("model")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=62862&format=png&color=000000" alt="Model" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("kayıt")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=rDu2jL92t7KD&format=png&color=000000" alt="Kayıt" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLowerCase().includes("dolar")) {
+      html += `<img src="https://img.icons8.com/?size=100&id=QHui8fGzf5rs&format=png&color=000000" alt="Dolar" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+    } else if (ozellik.toLocaleLowerCase('tr-TR').includes("tl fiyat")) {
+	  html += `<img src="https://img.icons8.com/?size=100&id=23730&format=png&color=000000" alt="TL Fiyat" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+   } else if (ozellik.toLocaleLowerCase('tr-TR').includes("performans")) {
+	  html += `<img src="https://img.icons8.com/?size=100&id=H6bd3dM9Ufck&format=png&color=000000" alt="Performans" style="width:16px;height:16px;margin-right:6px;vertical-align:middle;">`;
+	}
+
+
+    html += `${ozellik}</td>`;
+
+    for (let i = 0; i < compareData.length; i++) {
+      let styleClass = "";
+      const deger = tableRows[ozellik]?.[i] || '-';
+
+      if (ozellik === "TL Fiyat") {
+        const fiyatNum = parseFloat(deger.replace(/\./g, "").replace(",", "."));
+        if (fiyatNum === minFiyat) styleClass = "better";
+      }
+
+      if (ozellik === "RAM") {
+        const parts = deger.split('/');
+        const ramSkor = parts.length === 2 ? parseInt(parts[0]) * 1000 + parseInt(parts[1]) : 0;
+        if (ramSkor === maxRam) styleClass = "better";
+      }
+
+      html += `<td class="${styleClass}">${deger}</td>`;
+    }
+
+    html += `</tr>`;
+  });
+
+  html += `</table></div>`;
+
+  document.getElementById("compareTableContainer").innerHTML = html;
+  document.getElementById("comparePopup").style.display = "flex";
+}
+</script>
+
+
