@@ -1272,6 +1272,40 @@ if (statusFilter === "new") {
       return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     }
 
+    // SPECS metnini yalnızca bilinen alan başlıklarından ayır.
+    // İçerikteki virgüller ekran/kamera/sensör bilgisinin parçasıdır.
+    function parseTechnicalSpecs(raw) {
+      const names = ['İşlemci', 'Ekran', 'Kamera', 'Performans', 'GPU', 'Batarya', 'Boyutlar', 'Sensörler'];
+      const pattern = /(?:^|,\s*)(İşlemci|Ekran|Kamera|Performans|GPU|Batarya|Boyutlar|Sensörler)\s*:\s*/gi;
+      const source = String(raw || '').trim().replace(/^"|"$/g, '').trim();
+      const matches = Array.from(source.matchAll(pattern));
+      if (!matches.length) return source ? [{name:'Teknik Özellikler',value:source}] : [];
+      const fields = [];
+      if (matches[0].index > 0) {
+        const extra = source.slice(0, matches[0].index).replace(/,\s*$/, '').trim();
+        if (extra) fields.push({name:'Diğer',value:extra});
+      }
+      matches.forEach((m, i) => {
+        const start = m.index + m[0].length;
+        const end = i + 1 < matches.length ? matches[i+1].index : source.length;
+        const value = source.slice(start, end).replace(/,\s*$/, '').trim();
+        if (value) fields.push({name:names.find(n => n.toLocaleLowerCase('tr-TR') === m[1].toLocaleLowerCase('tr-TR')) || m[1],value});
+      });
+      return fields;
+    }
+
+    // Kayıt imkânı olmayan ifadeler kırmızı, diğer tüm durumlar yeşil.
+    // "Kayıt sorunu yok" gibi olumlu ifadeleri yanlışlıkla kırmızıya boyama.
+    function registrationIsMissing(value) {
+      const normalized = String(value || '')
+        .toLocaleLowerCase('tr-TR')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      if (/kayıt\s+sorunu\s+yok|kayıt\s+problemi\s+yok/.test(normalized)) return false;
+      return /\bkayıtsız\b|\bkayitsiz\b|\bkayıt\s+(?:(?:henüz|şu\s*an|şuan|şimdilik|şu\s*anda|mevcut)\s+)?yok\b|\bkayit\s+(?:(?:henuz|su\s*an|suan|simdilik|mevcut)\s+)?yok\b|\bkayıt\s+(?:bulunmuyor|yapılmadı|edilmemiş|mümkün\s+değil|imkanı\s+yok|imkânı\s+yok)\b|\bkayit\s+(?:bulunmuyor|yapilmadi|edilmemis|mumkun\s+degil|imkani\s+yok)\b/.test(normalized);
+    }
+
     function renderProducts(products) {
       const container = document.getElementById('productList');
       // Filtre değişince karşılaştırma seçimlerini kaybetme.
@@ -1299,7 +1333,7 @@ if (statusFilter === "new") {
           <td><button type="button" class="compact-order">Sipariş<br>Ver</button></td>
           <td class="compact-model"><span class="compact-model-name" role="button" tabindex="0" aria-expanded="false">${escapeCell(p.model)} <span class="detail-chevron">⌄</span></span><div class="compact-model-actions"><label class="compact-compare"><input type="checkbox" class="compare-checkbox" data-id="${escapeCell(id)}" ${checked.has(id) ? 'checked' : ''}> <span class="compare-word">Karşılaştır</span></label></div></td>
           <td class="compact-ram">${escapeCell(p.ram)}</td>
-          <td class="compact-registration">${escapeCell(p.kayit)}</td>
+          <td class="compact-registration${registrationIsMissing(p.kayit) ? ' registration-missing' : ''}">${escapeCell(p.kayit)}</td>
           <td class="compact-dollar">${escapeCell(p.dolar)}</td>
           <td class="compact-price">${escapeCell(showPrice)}</td>`;
         row.querySelector('.compact-order').addEventListener('click', () => {
@@ -1312,13 +1346,14 @@ if (statusFilter === "new") {
         detailRow.className = 'compact-details-row';
         detailRow.dataset.detailId = id;
         detailRow.hidden = !expandedIds.has(id);
-        const specs = String(p.specs || '').split(',').map(x => x.trim()).filter(Boolean);
-        const specHtml = specs.length ? `<div class="detail-specs">${specs.map(x => `<span>${escapeCell(x)}</span>`).join('')}</div>` : '<div class="detail-empty">Bu model için ek teknik özellik girilmemiş.</div>';
+        const specs = parseTechnicalSpecs(p.specs);
+        const specHtml = specs.length ? `<div class="detail-specs">${specs.map(x => `<div class="detail-spec-item"><small>${escapeCell(x.name)}</small><span>${escapeCell(x.value)}</span></div>`).join('')}</div>` : '<div class="detail-empty">Bu model için ek teknik özellik girilmemiş.</div>';
         const detailLink = p.link && /^https?:\/\//i.test(p.link.trim()) ? `<a class="detail-link" href="${escapeCell(p.link.trim())}" target="_blank" rel="noopener noreferrer">Detaylı özellikler ↗</a>` : '';
-        detailRow.innerHTML = `<td colspan="6"><div class="detail-panel"><div class="detail-heading">${escapeCell(p.model)}</div><div class="detail-facts"><div><small>RAM / Hafıza</small><b>${escapeCell(p.ram || '—')}</b></div><div><small>Kayıt Durumu</small><b>${escapeCell(p.kayit || '—')}</b></div><div><small>Dolar</small><b>${escapeCell(p.dolar || '—')}</b></div><div><small>TL Fiyatı</small><b>${escapeCell(showPrice)}</b></div></div>${specHtml}${detailLink}</div></td>`;
+        detailRow.innerHTML = `<td colspan="6"><div class="detail-panel"><div class="detail-heading">${escapeCell(p.model)}<button type="button" class="detail-close" aria-label="Teknik özellikleri kapat">✕ <span>Kapat</span></button></div><div class="detail-facts"><div><small>RAM / Hafıza</small><b>${escapeCell(p.ram || '—')}</b></div><div><small>Kayıt Durumu</small><b class="${registrationIsMissing(p.kayit) ? 'registration-missing-text' : ''}">${escapeCell(p.kayit || '—')}</b></div><div><small>Dolar</small><b>${escapeCell(p.dolar || '—')}</b></div><div><small>TL Fiyatı</small><b>${escapeCell(showPrice)}</b></div></div>${specHtml}${detailLink}</div></td>`;
         tbody.appendChild(detailRow);
         const trigger = row.querySelector('.compact-model-name');
         const toggle = () => { detailRow.hidden = !detailRow.hidden; trigger.setAttribute('aria-expanded', String(!detailRow.hidden)); row.classList.toggle('detail-open', !detailRow.hidden); };
+        detailRow.querySelector('.detail-close').addEventListener('click', () => { if (!detailRow.hidden) toggle(); });
         trigger.addEventListener('click', toggle);
         trigger.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') {e.preventDefault();toggle();} });
         if (!detailRow.hidden) {trigger.setAttribute('aria-expanded','true');row.classList.add('detail-open');}
@@ -1749,16 +1784,23 @@ html,body {max-width:100%;overflow-x:clip;}
 .compact-details-row[hidden]{display:none!important;}
 .compact-price-table tr.compact-details-row td{padding:0!important;text-align:left!important;background:#f5f9ff!important;border-top:0!important;}
 .detail-panel{padding:13px 16px;border-left:3px solid #3684d4;box-shadow:inset 0 2px 6px #dce9f455;color:#24384f;}
-.detail-heading{font-weight:800;font-size:13px;margin-bottom:10px;color:#154d86;}
+.detail-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-weight:800;font-size:13px;margin-bottom:10px;color:#154d86;}
+.detail-close{flex:none;display:inline-flex;align-items:center;gap:4px;border:1px solid #cbdcf0;background:#fff;color:#31618f;border-radius:6px;padding:4px 7px;font-size:10px;font-weight:700;line-height:1.2;cursor:pointer;}
+.detail-close:hover{background:#e7f1ff;}
+.compact-price-table td.compact-registration.registration-missing{background:#f6c1c1!important;color:#8f1717!important;font-weight:700;}
+.registration-missing-text{color:#b42323!important;}
 .detail-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:10px;}
 .detail-facts>div{background:white;border:1px solid #e1eaf3;border-radius:7px;padding:8px;min-width:0;overflow-wrap:anywhere;}
 .detail-facts small{display:block;color:#6b7b8e;font-size:10px;margin-bottom:3px;}
 .detail-facts b{font-size:12px;}
-.detail-specs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0;}
-.detail-specs span{font-size:11px;background:#e7f1ff;border:1px solid #cde2fb;border-radius:5px;padding:5px 7px;}
+.detail-specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:8px 0;min-width:0;}
+.detail-spec-item{min-width:0;box-sizing:border-box;background:#e7f1ff;border:1px solid #cde2fb;border-radius:6px;padding:7px 8px;overflow-wrap:anywhere;}
+.detail-spec-item small{display:block;color:#426b92;font-size:10px;font-weight:700;margin-bottom:3px;}
+.detail-spec-item span{display:block;font-size:11px;line-height:1.4;white-space:normal;overflow-wrap:anywhere;}
 .detail-empty{font-size:11px;color:#768394;margin:8px 0;}
 .detail-link{display:inline-block;background:#1673c9;color:white!important;text-decoration:none;padding:8px 12px;border-radius:7px;font-size:12px;font-weight:700;margin-top:5px;}
-@media(max-width:600px){.detail-panel{padding:10px 9px}.detail-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.detail-facts>div{padding:6px}.detail-facts b{font-size:11px}.detail-heading{font-size:12px}.detail-specs span{font-size:10px}}
+@media(max-width:600px){.detail-panel{padding:10px 9px}.detail-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.detail-facts>div{padding:6px}.detail-facts b{font-size:11px}.detail-heading{font-size:12px}.detail-spec-item{padding:6px}.detail-spec-item span{font-size:10px}.detail-spec-item small{font-size:9px}}
+@media(max-width:360px){.detail-specs{grid-template-columns:1fr 1fr;gap:4px}.detail-spec-item{padding:5px}.detail-panel{padding:8px 6px}}
 </style>
 </body></html>
 
